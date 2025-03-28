@@ -294,15 +294,15 @@ o
             }, FAILSAFE_TIMEOUT);
 
             googletag.cmd.push(function() {
-				// Set the spoofed page URL BEFORE defining the slot
-  			googletag.pubads().set('page_url', 'https://adops.shop/gg/gg-alignmenttesting4.html');
+			// Set the spoofed page URL before defining the slot
+  			//googletag.pubads().set('page_url', 'https://adops.shop/gg/gg-alignmenttesting4.html');
                                 //googletag.defineSlot('/21697839273/jpx_roadblock/medium_rectangle_1', div_1_sizes, 'div-1').addService(googletag.pubads());
                                 //googletag.defineSlot('/21697839273/medium_rectangle_3', div_3_sizes, 'div-2').addService(googletag.pubads());
 								//googletag.defineSlot('/21697839273/jpx_roadblock/medium_rectangle_2', div_2_sizes, 'div-3').addService(googletag.pubads());
                                 //googletag.defineSlot('/21697839273/jpx_roadblock/leaderboard_1', [728, 90],  'leaderboard').addService(googletag.pubads());
                                 googletag.defineSlot('/21697839273/in-article/slot1', div_1_sizes, 'slot1').addService(googletag.pubads());
                                 googletag.defineSlot('/21697839273/in-article/slot2', div_2_sizes, 'slot2').addService(googletag.pubads());
-                                googletag.set('page_url', 'https://adops.shop/gg/gg-alignmenttesting4.html').defineSlot('/21697839273/in-article/slot3', div_3_sizes, 'slot3').addService(googletag.pubads());
+                                googletag.defineSlot('/21697839273/in-article/slot3', div_3_sizes, 'slot3').addService(googletag.pubads());
                                 googletag.defineSlot('/21697839273/in-article/slot4', [300, 600], 'slot4').addService(googletag.pubads());
                                 googletag.defineSlot('/21697839273/in-article/slot5', [300, 600], 'slot5').addService(googletag.pubads());
                                 googletag.defineSlot('/21697839273/in-article/slot6', div_2_sizes, 'slot6').addService(googletag.pubads());
