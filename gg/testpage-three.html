@@ -33,14 +33,28 @@ o
 
 	-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 	
-	<!-- Uniconsent stub code -->
+	<!-- IAB TCF v2.0 Stub -->
 <script>
-	// GPP stub
 	(function() {
 	  var tcfFrame = document.createElement('iframe');
-	  tcfFrame.name = '__gppLocator';
+	  tcfFrame.name = '__tcfapiLocator';
 	  tcfFrame.style.display = 'none';
 	  document.body.appendChild(tcfFrame);
+  
+	  window.__tcfapi = function() {
+		window.__tcfapi.queue = window.__tcfapi.queue || [];
+		window.__tcfapi.queue.push(arguments);
+	  };
+	})();
+  </script>
+  
+  <!-- IAB GPP Stub -->
+  <script>
+	(function() {
+	  var gppFrame = document.createElement('iframe');
+	  gppFrame.name = '__gppLocator';
+	  gppFrame.style.display = 'none';
+	  document.body.appendChild(gppFrame);
   
 	  window.__gpp = function() {
 		window.__gpp.queue = window.__gpp.queue || [];
@@ -48,7 +62,6 @@ o
 	  };
 	})();
   </script>
-  <!-- end stub -->
   
   <!-- Uniconsent CMP for GDPR & GPP -->
   <script type="text/javascript">
@@ -321,7 +334,7 @@ o
 										"AUD": { "USD": 0.66 },
 										"JPY": { "USD": 0.0067 }
 									},
-									conversionRateFile: "https://cdn.jsdelivr.net/npm/@prebid/currency@latest/rates.json",
+									conversionRateFile: "https://cdn.jsdelivr.net/npm/@prebid/currency@1.16.0/rates.json",
 									fallbackOnUnknownRate: false
 							}
           });
