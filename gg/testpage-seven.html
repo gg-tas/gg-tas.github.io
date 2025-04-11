@@ -27,11 +27,31 @@ o
 
 		<script id="jpx-header-script" src="//justpremium.s3.amazonaws.com/hdb/js.js"></script>
 
-	<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+		<!-- TCF v2.0 stub code (required for Quantcast CMP and Prebid) -->
+<script>
+	(function() {
+	  var tcfFrame = document.createElement('iframe');
+	  tcfFrame.name = '__tcfapiLocator';
+	  tcfFrame.style.display = 'none';
+	  document.body.appendChild(tcfFrame);
+  
+	  window.__tcfapi = function() {
+		window.__tcfapi.queue = window.__tcfapi.queue || [];
+		window.__tcfapi.queue.push(arguments);
+	  };
+	})();
+  </script>
+	<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) 
+	<script type="text/javascript" src="../assets/js/quantcast2.js"></script>  
+	End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
-	<script type="text/javascript" src="../assets/js/quantcast2.js"></script>    
-
-	<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+	<!-- New InMobi tag -->
+	<script
+  async
+  type="text/javascript"
+  src="https://cmp.inmobi.com/choice/p-EAsuR2wLacZTj/ggtascmp.js"
+></script>
+<!-- end Inmobi tag -->
 
 		<!-- Prebid Core wrapper head section (demo) -->
  		<script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
