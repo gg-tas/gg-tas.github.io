@@ -44,7 +44,7 @@ o
 
 		<!-- Prebid wrapper -->
  		<script async src="//www.googletagservices.com/tag/js/gpt.js"></script>
-        <script async src="../prebidjs/prebid8.8.0.js"></script>
+        <script async src="../prebidjs/prebid8.42.0.js"></script>
         <script>
             var div_1_sizes = [
               [1, 1]
@@ -194,7 +194,7 @@ o
 										"complete": 1,
 										"nodes": [
 											{
-											"asi":"adops.shop",
+											"asi":"koshymedia.com",
 											"sid":"00001",
 											"hp":1
 											}
@@ -208,7 +208,7 @@ o
 								filterSettings: {
 										iframe: {
 											bidders: ['gumgum'], // Only JP and GG enabled for iframe sync
-											filter: 'exclude'
+											filter: 'include'
 										},
 										image: {
 											bidders: '*', 
@@ -228,12 +228,19 @@ o
               						timeout: 8000
             					}
 							},
-							 currency: {
+							currency: {
 									adServerCurrency: "USD",
 									granularityMultiplier: 1,
-									defaultRates: { "GBP": { "USD": 1.22 }, }
-    }
-
+									defaultRates: {
+										"GBP": { "USD": 1.22 },
+										"EUR": { "USD": 1.09 },
+										"CAD": { "USD": 0.75 },
+										"AUD": { "USD": 0.66 },
+										"JPY": { "USD": 0.0067 }
+									},
+									conversionRateFile: "https://cdn.jsdelivr.net/gh/prebid/currency-file@latest/rates.json",
+									fallbackOnUnknownRate: false
+							}
           });
 
 
@@ -372,7 +379,7 @@ o
 									<span class="date">Sep 23, 2023</span>
 									<h2><a href="#">
 									Test page</a></h2>
-									<p>Prebid 8.8.0 / Custom modules: GDPR, GPP, SCO/Schain, Currency, Floors, Size Mapping<br />
+									<p>Prebid 8.42.0 / Custom modules: GDPR, GPP, SCO/Schain, Currency, Floors, Size Mapping<br />
 								 All formats / JPX Zone ID 123140, GG Zone vpbtfzzn<br />
 									JPX x GG x AppNexus Bidder Adapter</p>
 									</header>
