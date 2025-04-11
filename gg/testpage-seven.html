@@ -498,7 +498,7 @@ o
             pbjs.que.push(function() {
 
 							pbjs.setConfig({
-
+							//debug: true,
 							schain: {
                             validation: "strict",
                             config: {
@@ -539,6 +539,19 @@ o
 									cmpApi: 'iab',
 									timeout: 8000
 									}
+							},
+							currency: {
+									adServerCurrency: "USD",
+									granularityMultiplier: 1,
+									defaultRates: {
+										"GBP": { "USD": 1.22 },
+										"EUR": { "USD": 1.00 },
+										"CAD": { "USD": 0.75 },
+										"AUD": { "USD": 0.66 },
+										"JPY": { "USD": 0.0067 }
+									},
+									conversionRateFile: "https://cdn.jsdelivr.net/npm/@prebid/currency@1.16.0/rates.json",
+									fallbackOnUnknownRate: false
 							}
 
           });
