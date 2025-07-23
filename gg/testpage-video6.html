@@ -439,6 +439,8 @@ o
     });
 
     // Floating logic
+   // Floating logic
+  window.addEventListener('DOMContentLoaded', () => {
     const anchor = document.getElementById('video-anchor');
     const container = document.getElementById('vid-container');
 
@@ -450,10 +452,11 @@ o
           container.classList.remove('floating');
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0 }
     );
 
     observer.observe(anchor);
+  });
   </script>
 </div>
 							</article>
