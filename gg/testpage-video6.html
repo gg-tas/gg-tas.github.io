@@ -24,9 +24,15 @@ o
 		<link rel="stylesheet" href="../assets/css/gg-cookies.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 
-	<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+	<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) 
 	<script type="text/javascript" src="../assets/js/quantcast2.js"></script>    
-	<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+ End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+
+<!-- Uniconsent CMP + stubs -->
+		<script src="https://cmp.uniconsent.com/v2/stub.min.js"></script>
+		<script src="https://cmp.uniconsent.com/v2/stubgcm.min.js"></script>
+		<script async src='https://cmp.uniconsent.com/v2/b03906be39/cmp.js'></script>
+
 
     <!-- Video.js IMA SDK -->
     <link rel="stylesheet" href="https://googleads.github.io/videojs-ima/node_modules/video.js/dist/video-js.min.css" />
@@ -413,7 +419,7 @@ o
         </div>
 
 	 End ad Tag -->
-     <div id="video-anchor"></div>           
+     <div id="video-anchor">           
     <div id="vid-container">
   <video id="content_video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
     <source src="../video/Phil Schraeder, CEO, GumGum.mp4" type="video/mp4" />
@@ -431,7 +437,7 @@ o
     player.ima({
       id: 'content_video',
       adTagUrl:
-        'https://pubads.g.doubleclick.net/gampad/ads?iu=/21697839273/video/instream_1x1&description_url=https%3A%2F%2Fadops.shop%2Fgg%2Ftestpage-video2.html&tfcd=0&npa=0&sz=1x1&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=&vpos=preroll'
+        'https://pubads.g.doubleclick.net/gampad/ads?iu=/21697839273/video/instream_1x1&description_url=koshymedia.com&tfcd=0&npa=0&sz=1x1&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=&vpos=preroll'
     });
 
     player.ready(() => {
@@ -458,6 +464,7 @@ o
     observer.observe(anchor);
   });
   </script>
+</div>
 </div>
 							</article>
 
